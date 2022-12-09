@@ -1,6 +1,6 @@
 from os import listdir
 from os.path import isfile, join
-
+import os
 import time
 watchDirectory = './results'
 pollTime = 5 #in seconds
@@ -16,6 +16,8 @@ def listComparison(OriginalList: list, NewList: list):
 
 def doThingsWithNewFiles(newFiles: list,watchDirectory:str):    
         print(f'file created{newFiles}')
+        for i in newFiles:
+            os.remove('./results/'+i)
 
 def fileWatcher(my_dir: str, pollTime: int):
     while True:
