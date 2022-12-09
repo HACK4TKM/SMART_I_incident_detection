@@ -41,7 +41,9 @@ category=["ROAD_ACCIDENT","HARRASMENT","ABDUCTION","PUBLIC_FIGHT"]
 #     return contract.functions.getCases().call()
 # print(get_list())    
 
+def doThingsWithNewFiles(newFiles: list,watchDirectory:str):
+    for i in newFiles:
+        video_cid = w3.post_upload((i, open(watchDirectory+"/"+i, 'rb')))
+        print(video_cid)
 
-readme_cid = w3.post_upload(('md.py', open('md.py', 'rb')))
-print(readme_cid)
 
