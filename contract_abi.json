@@ -1,0 +1,199 @@
+[{
+    "inputs": [
+        {
+            "internalType": "string",
+            "name": "cid",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "time",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "loc",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "date",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "type_",
+            "type": "string"
+        }
+    ],
+    "name": "addCase",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+},
+{
+    "anonymous": false,
+    "inputs": [
+        {
+            "components": [
+                {
+                    "internalType": "string",
+                    "name": "cid",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "time",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "loc",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "date",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "type_",
+                    "type": "string"
+                }
+            ],
+            "indexed": false,
+            "internalType": "struct Hawkeye.Case",
+            "name": "",
+            "type": "tuple"
+        }
+    ],
+    "name": "NewCase",
+    "type": "event"
+},
+{
+    "inputs": [
+        {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }
+    ],
+    "name": "case_array",
+    "outputs": [
+        {
+            "internalType": "string",
+            "name": "cid",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "time",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "loc",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "date",
+            "type": "string"
+        },
+        {
+            "internalType": "string",
+            "name": "type_",
+            "type": "string"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+        }
+    ],
+    "name": "getCase",
+    "outputs": [
+        {
+            "components": [
+                {
+                    "internalType": "string",
+                    "name": "cid",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "time",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "loc",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "date",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "type_",
+                    "type": "string"
+                }
+            ],
+            "internalType": "struct Hawkeye.Case",
+            "name": "",
+            "type": "tuple"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [],
+    "name": "getCases",
+    "outputs": [
+        {
+            "components": [
+                {
+                    "internalType": "string",
+                    "name": "cid",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "time",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "loc",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "date",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "type_",
+                    "type": "string"
+                }
+            ],
+            "internalType": "struct Hawkeye.Case[]",
+            "name": "",
+            "type": "tuple[]"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+}
+]
