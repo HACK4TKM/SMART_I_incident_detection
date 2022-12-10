@@ -13,7 +13,7 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 
 def create_new_file(frames,width,height):
     filename='results/{}.mp4'.format(str(uuid.uuid1()))
-    ouput_video = cv2.VideoWriter(filename,cv2.VideoWriter_fourcc(*'MJPG'), 10,(width,height))
+    ouput_video = cv2.VideoWriter(filename,cv2.VideoWriter_fourcc(*'H264'), 10,(width,height))
     # print(frames)
     # print(len(frames))
     for i in frames:
