@@ -47,3 +47,7 @@ def doThingsWithNewFiles(newFiles: list,watchDirectory:str):
         print(video_cid)
 
 
+def uploadNewFile(newFile:str):
+    video_cid = w3.post_upload((newFile.split('/')[-1], open(newFile, 'rb')))
+    print(video_cid)
+  
