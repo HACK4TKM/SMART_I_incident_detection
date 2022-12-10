@@ -46,3 +46,9 @@ w3storage==0.0.1
 web3==5.31.3
 websockets==9.1
 yarl==1.8.2
+numpy
+pandas
+opencv-python
+tensorflow
+keras
+matplotlib
