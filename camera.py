@@ -27,7 +27,7 @@ def startapplication():
     accident_frames=[]
     accident_times=[]
     # video = cv2.VideoCapture('accident1.mp4')
-    video = cv2.VideoCapture("rtsp://192.168.1.6:4747/h264_pcm.sdp",cv2.CAP_FFMPEG)
+    video = cv2.VideoCapture(0)
     
     frames = video.get(cv2.CAP_PROP_FRAME_COUNT)
     width = int(video.get(cv2. CAP_PROP_FRAME_WIDTH ))

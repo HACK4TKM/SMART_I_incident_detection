@@ -33,6 +33,11 @@ current_time = str(now.strftime("%H:%M:%S"))
 current_date = str(now.strftime("%d/%m/%Y"))
 g = geocoder.ip('me')
 geoLoc = Nominatim(user_agent="GetLoc")
+camera_place = geoLoc.reverse(g.latlng)
+
+location = geoLoc.geocode(camera_place)
+longitude = str(location.longitude)
+latitude = str(location.latitude)
 camera_place = str(geoLoc.reverse(g.latlng))
 
 #category of cases
@@ -77,8 +82,13 @@ def doThingsWithNewFiles(newFiles: list,watchDirectory:str):
 def uploadNewFile(newFile:str):
 	video_cid = w3.post_upload((newFile.split('/')[-1], open(newFile, 'rb')))
 	print(video_cid)
+	os.remove(newFile)
+	# new_case = contract.functions.addCase
+	# (video_cid,camera_place,current_time,current_date,category[0]
+	# ).call()
+	# print(new_case)
 	transaction = contract.functions.addCase(
-	video_cid,camera_place,current_time,current_date,category[0]
+	video_cid,str(newFile),camera_place,longitude,latitude,current_time,current_date,category[0]
 	).buildTransaction({
 	'gas': 6000000,
 	'gasPrice': web3.eth.gasPrice,
@@ -95,4 +105,4 @@ def uploadNewFile(newFile:str):
 	print(signed_txn)
 	tx = web3.eth.sendRawTransaction(signed_txn.rawTransaction)
 	print(tx)
-  
+	
