@@ -43,38 +43,56 @@ category=["ROAD_ACCIDENT","HARRASMENT","ABDUCTION","PUBLIC_FIGHT"]
 # print(get_list())    
 
 def doThingsWithNewFiles(newFiles: list,watchDirectory:str):
-    for i in newFiles:
-        video_cid = str(w3.post_upload((i, open(watchDirectory+"/"+i, 'rb'))))
-        print(video_cid)
-        os.remove(watchDirectory+"/"+i)
-        # new_case = contract.functions.addCase
-        # (video_cid,camera_place,current_time,current_date,category[0]
-        # ).call()
-        # print(new_case)
-        transaction = contract.functions.addCase(
-        video_cid,camera_place,current_time,current_date,category[0]
-        ).buildTransaction({
-        'gas': 6000000,
-        'gasPrice': web3.eth.gasPrice,
-        'from': '0x24d4E35630e579b8E5807E469E487bf799A22B90',
-        'nonce': web3.eth.getTransactionCount('0x24d4E35630e579b8E5807E469E487bf799A22B90')
-        }) 
-        print("new")
-        print(web3.eth.gasPrice)
-        print(transaction)
-        print("new")
-        
-        private_key = PRIVATE_KEY 
-        signed_txn = web3.eth.account.signTransaction(transaction, private_key=private_key)
-        print(signed_txn)
-        tx = web3.eth.sendRawTransaction(signed_txn.rawTransaction)
-        print(tx)
-        
-          
+	for i in newFiles:
+		video_cid = str(w3.post_upload((i, open(watchDirectory+"/"+i, 'rb'))))
+		print(video_cid)
+		os.remove(watchDirectory+"/"+i)
+		# new_case = contract.functions.addCase
+		# (video_cid,camera_place,current_time,current_date,category[0]
+		# ).call()
+		# print(new_case)
+		transaction = contract.functions.addCase(
+		video_cid,camera_place,current_time,current_date,category[0]
+		).buildTransaction({
+		'gas': 6000000,
+		'gasPrice': web3.eth.gasPrice,
+		'from': '0x24d4E35630e579b8E5807E469E487bf799A22B90',
+		'nonce': web3.eth.getTransactionCount('0x24d4E35630e579b8E5807E469E487bf799A22B90')
+		}) 
+		print("new")
+		print(web3.eth.gasPrice)
+		print(transaction)
+		print("new")
+		
+		private_key = PRIVATE_KEY 
+		signed_txn = web3.eth.account.signTransaction(transaction, private_key=private_key)
+		print(signed_txn)
+		tx = web3.eth.sendRawTransaction(signed_txn.rawTransaction)
+		print(tx)
+		
+		  
 
 
 
 def uploadNewFile(newFile:str):
-    video_cid = w3.post_upload((newFile.split('/')[-1], open(newFile, 'rb')))
-    print(video_cid)
+	video_cid = w3.post_upload((newFile.split('/')[-1], open(newFile, 'rb')))
+	print(video_cid)
+	transaction = contract.functions.addCase(
+	video_cid,camera_place,current_time,current_date,category[0]
+	).buildTransaction({
+	'gas': 6000000,
+	'gasPrice': web3.eth.gasPrice,
+	'from': '0x24d4E35630e579b8E5807E469E487bf799A22B90',
+	'nonce': web3.eth.getTransactionCount('0x24d4E35630e579b8E5807E469E487bf799A22B90')
+	}) 
+	print("new")
+	print(web3.eth.gasPrice)
+	print(transaction)
+	print("new")
+	
+	private_key = PRIVATE_KEY 
+	signed_txn = web3.eth.account.signTransaction(transaction, private_key=private_key)
+	print(signed_txn)
+	tx = web3.eth.sendRawTransaction(signed_txn.rawTransaction)
+	print(tx)
   
