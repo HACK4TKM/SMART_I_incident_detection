@@ -1,199 +1,482 @@
-[{
-    "inputs": [
+[
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
         {
-            "internalType": "string",
-            "name": "cid",
-            "type": "string"
-        },
-        {
-            "internalType": "string",
-            "name": "time",
-            "type": "string"
-        },
-        {
-            "internalType": "string",
-            "name": "loc",
-            "type": "string"
-        },
-        {
-            "internalType": "string",
-            "name": "date",
-            "type": "string"
-        },
-        {
-            "internalType": "string",
-            "name": "type_",
-            "type": "string"
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "cid",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "time",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "category",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "verified",
+              "type": "bool"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct SmartICases.Case",
+          "name": "",
+          "type": "tuple"
         }
-    ],
-    "name": "addCase",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-},
-{
-    "anonymous": false,
-    "inputs": [
+      ],
+      "name": "NewCase",
+      "type": "event"
+    },
+    {
+      "inputs": [
         {
-            "components": [
-                {
-                    "internalType": "string",
-                    "name": "cid",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "time",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "loc",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "date",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "type_",
-                    "type": "string"
-                }
-            ],
-            "indexed": false,
-            "internalType": "struct Hawkeye.Case",
-            "name": "",
-            "type": "tuple"
-        }
-    ],
-    "name": "NewCase",
-    "type": "event"
-},
-{
-    "inputs": [
-        {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-        }
-    ],
-    "name": "case_array",
-    "outputs": [
-        {
-            "internalType": "string",
-            "name": "cid",
-            "type": "string"
+          "internalType": "string",
+          "name": "_cid",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "time",
-            "type": "string"
+          "internalType": "string",
+          "name": "_location",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "loc",
-            "type": "string"
+          "internalType": "string",
+          "name": "_time",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "date",
-            "type": "string"
+          "internalType": "string",
+          "name": "_date",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "type_",
-            "type": "string"
+          "internalType": "string",
+          "name": "_category",
+          "type": "string"
         }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-},
-{
-    "inputs": [
+      ],
+      "name": "addCase",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "caseCount",
+      "outputs": [
         {
-            "internalType": "uint256",
-            "name": "id",
-            "type": "uint256"
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
         }
-    ],
-    "name": "getCase",
-    "outputs": [
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
         {
-            "components": [
-                {
-                    "internalType": "string",
-                    "name": "cid",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "time",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "loc",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "date",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "type_",
-                    "type": "string"
-                }
-            ],
-            "internalType": "struct Hawkeye.Case",
-            "name": "",
-            "type": "tuple"
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
         }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-},
-{
-    "inputs": [],
-    "name": "getCases",
-    "outputs": [
+      ],
+      "name": "cases",
+      "outputs": [
         {
-            "components": [
-                {
-                    "internalType": "string",
-                    "name": "cid",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "time",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "loc",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "date",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "type_",
-                    "type": "string"
-                }
-            ],
-            "internalType": "struct Hawkeye.Case[]",
-            "name": "",
-            "type": "tuple[]"
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "cid",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "time",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "verified",
+          "type": "bool"
         }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-}
-]
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllCases",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "cid",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "time",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "category",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "verified",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct SmartICases.Case[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getCaseById",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "cid",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "time",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "category",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "verified",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct SmartICases.Case",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPinnedCaseById",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "caseId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pinnedCaseId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "cid",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "time",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "category",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "verified",
+              "type": "bool"
+            },
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct SmartICases.PinnedCase",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPinnedCases",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "caseId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pinnedCaseId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "location",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "cid",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "time",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "category",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "verified",
+              "type": "bool"
+            },
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct SmartICases.PinnedCase[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "pinCase",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pinnedCaseCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "pinnedCases",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "caseId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pinnedCaseId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "location",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "cid",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "time",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "date",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "category",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "verified",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
