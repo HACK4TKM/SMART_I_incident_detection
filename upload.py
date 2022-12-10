@@ -19,12 +19,12 @@ isConnected = web3.isConnected()
 print(isConnected)
 
 #connect to smart contract
-smart_contract_address = SMART_CONTRACT_ADDRESS
+
 
 with open('contract_abi.json', 'r') as f:
   contract_abi = json.loads(f.read())
 
-contract = web3.eth.contract(address=smart_contract_address, abi=contract_abi)
+contract = web3.eth.contract(address=SMART_CONTRACT_ADDRESS, abi=contract_abi)
 
 #to get time,date and place of a case
 now = datetime.now()
